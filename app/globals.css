@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.login-header{
+    background: linear-gradient(to right, rgb(78, 62, 62) 30%, rgb(228, 164, 68) 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    }
+    
