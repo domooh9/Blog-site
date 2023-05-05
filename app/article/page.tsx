@@ -88,40 +88,43 @@ function Articles({ user }: Props) {
   }
 
   return (
-    <div className="container">
-      <div>
-        <h2>{title}</h2>
-        <p>{story}</p>
-      </div>
-      <div>
-        {comments?.map((comment: Comment) => {
-          return <Comment key={comment.id} check={comment} />;
-        })}
-      </div>
-      <div className="card">
-        <h4>Comments:</h4>
-        <form onSubmit={handleSubmit}>
-          <div className="input_text">
-            <textarea
-              id="message"
-              placeholder="Comment.."
-              name="comment"
-              onChange={handleChange}
-              value={formData.comment}
-            />
+    <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="container">
+          <div>
+            <h2>{title}</h2>
+            <p>{story}</p>
           </div>
-          <div className="btn">
-            <button
-              className="flex w-full justify-center 
+          <div>
+            {comments?.map((comment: Comment) => {
+              return <Comment key={comment.id} check={comment} />;
+            })}
+          </div>
+          <div className="card">
+            <form onSubmit={handleSubmit}>
+              <div className="input_text">
+                <textarea
+                  id="message"
+                  placeholder="Comment.."
+                  name="comment"
+                  onChange={handleChange}
+                  value={formData.comment}
+                />
+              </div>
+              <div className="btn">
+                <button
+                  className="flex w-full justify-center 
                 rounded-md bg-indigo-600 px-3 py-1.5 
                 text-sm font-semibold leading-6 text-white shadow-sm
                hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2
                 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              type="submit">
-              Post
-            </button>
+                  type="submit">
+                  Post
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

@@ -76,7 +76,7 @@ function Login({ onlogin, setShowLogin }: ILoginProps) {
           </h2>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px] bg-white">
           <div className="bg-gray px-6 py-12 shadow sm:rounded-lg sm:px-12">
             <form
               className="space-y-6"
@@ -141,7 +141,7 @@ function Login({ onlogin, setShowLogin }: ILoginProps) {
                 <div className="text-sm leading-6">
                   <a
                     href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500">
+                    className="font-semibold text-blue-700 hover:text-blue-400">
                     Forgot password?
                   </a>
                 </div>
@@ -150,7 +150,7 @@ function Login({ onlogin, setShowLogin }: ILoginProps) {
                 <button
                   value={isLoading ? "Logging in..." : "Login"}
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  className="flex w-full justify-center rounded-md bg-gray-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   Sign in
                 </button>
               </div>
@@ -166,7 +166,7 @@ function Login({ onlogin, setShowLogin }: ILoginProps) {
                 <a
                   onClick={() => setShowLogin(false)}
                   href="#"
-                  className="font-medium text-blue-500 hover:text-green-700">
+                  className="font-medium text-blue-700 hover:text-green-700">
                   create account
                 </a>
               </div>

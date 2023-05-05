@@ -54,108 +54,67 @@ function Write({ user, addArticle }) {
 
   return (
     <>
-      <div className="container">
-        <div className="card">
-          {/* <form
-            className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
-            onSubmit={handleSubmit}>
-            <div className="mt-1">
-              <input
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                placeholder="Title..."
-                type="text"
-                name="title"
-                onChange={handleChange}
-                value={formData.title}
-              />
+      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 ">
+        <div className="sm:mx-auto sm:w-full sm:max-w-md">
+          <div className="container">
+            <div className="card">
+              <form onSubmit={handleSubmit}>
+                <h2>Post your story</h2>
+                <div className="input_text">
+                  <input
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Title..."
+                    type="text"
+                    name="title"
+                    onChange={handleChange}
+                    value={formData.title}
+                  />
+                </div>
+                <div className="input_text">
+                  <input
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Topic..."
+                    type="text"
+                    name="topic"
+                    onChange={handleChange}
+                    value={formData.topic}
+                  />
+                </div>
+                <div className="input_text">
+                  <input
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    id="message"
+                    placeholder="Tell your story..."
+                    type="text"
+                    name="story"
+                    onChange={handleChange}
+                    value={formData.story}
+                  />
+                </div>
+                <div className="input_text">
+                  <input
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Time to read.."
+                    type="number"
+                    name="time"
+                    onChange={handleChange}
+                    value={formData.time}
+                  />
+                </div>
+                <div className="btn">
+                  <button
+                    className="flex w-full justify-center 
+                     rounded-md bg-indigo-600 px-3 py-1.5 
+                     text-sm font-semibold leading-6 text-white shadow-sm
+                     hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2
+                     focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    type="submit">
+                    Post
+                  </button>
+                </div>
+              </form>
             </div>
-            <div className="mt-1">
-              <input
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                placeholder="Topic..."
-                type="text"
-                name="topic"
-                onChange={handleChange}
-                value={formData.topic}
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Tell your story..."
-                type="text"
-                name="story"
-                onChange={handleChange}
-                value={formData.story}
-                className="block w-full resize-none border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-              />
-            </div>
-
-            <input
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="Time to read.."
-              type="number"
-              name="time"
-              onChange={handleChange}
-              value={formData.time}
-            />
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-              Submit
-            </button>
-          </form> */}
-
-          <form onSubmit={handleSubmit}>
-            <h2>Post your story</h2>
-            <div className="input_text">
-              <input
-                placeholder="Title..."
-                type="text"
-                name="title"
-                onChange={handleChange}
-                value={formData.title}
-              />
-            </div>
-            <div className="input_text">
-              <input
-                placeholder="Topic..."
-                type="text"
-                name="topic"
-                onChange={handleChange}
-                value={formData.topic}
-              />
-            </div>
-            <div className="input_text">
-              <input
-                id="message"
-                placeholder="Tell your story..."
-                type="text"
-                name="story"
-                onChange={handleChange}
-                value={formData.story}
-              />
-            </div>
-            <div className="input_text">
-              <input
-                placeholder="Time to read.."
-                type="number"
-                name="time"
-                onChange={handleChange}
-                value={formData.time}
-              />
-            </div>
-            <div className="btn">
-              <button
-                className="flex w-full justify-center 
-                rounded-md bg-indigo-600 px-3 py-1.5 
-                text-sm font-semibold leading-6 text-white shadow-sm
-               hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2
-                focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                type="submit">
-                Post
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
 
